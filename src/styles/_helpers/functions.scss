@@ -1,0 +1,11 @@
+// Media Screens
+
+@function screen($breakpointName: lg, $desktopFirst: false) {
+    $breakpointVal: map-get($screens, $breakpointName);
+
+    @if $desktopFirst {
+        $breakpointVal: $breakpointVal - 1;
+    }
+
+    @return $breakpointVal;
+}

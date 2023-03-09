@@ -1,0 +1,28 @@
+/* Font weight hint
+// 100 – thin
+// 200 – extra light
+// 300 – light
+// 400 – regular (normal)
+// 500 – medium
+// 600 – semibold
+// 700 – bold
+// 800 – extrabold
+// 900 – black */
+
+@mixin font($family, $path, $weight: $fw-regular, $style: normal) {
+    @font-face {
+        font-family: $family;
+        src:
+            // local($family)
+            url('@/fonts/' + $path + '.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@include font('Hoves', 'TTHoves-Light', 300);
+@include font('Hoves', 'TTHoves-Regular', 400);
+@include font('Hoves', 'TTHoves-Medium', 500);
+@include font('Hoves', 'TTHoves-DemiBold', 600);
+@include font('Hoves', 'TTHoves-Bold', 600);

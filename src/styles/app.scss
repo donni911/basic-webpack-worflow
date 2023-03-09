@@ -1,0 +1,21 @@
+/*Prefixes
+l — layouts
+s — section
+c — components
+u — utilities
+i — icons
+sr — screen readers
+o — object 
+ */
+
+// Helpers
+@import './_helpers/fonts.scss';
+@import './_helpers/variables.scss';
+@import './_helpers/mixins.scss';
+@import './_helpers/functions.scss';
+@import './_helpers/container.scss';
+@import './_helpers/reset.scss';
+@import './_helpers/images.scss';
+
+//Pages 
+@import './_pages/landing.scss';

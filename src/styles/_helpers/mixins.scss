@@ -1,0 +1,53 @@
+@mixin screen($minValue: lg, $maxValue: false) {
+    @if $minValue ==in {
+        $minValue: null;
+    }
+
+    $isSegment: false;
+    $isIncrease: false;
+    $isDecrease: false;
+
+    $printSegment: false;
+    $printIncrease: false;
+    $printDecrease: false;
+    $printFlatten: false;
+
+    $isSegment: $minValue and $maxValue;
+    $isIncrease: $minValue;
+    $isDecrease: $maxValue;
+
+
+    $printSegment: $isSegment;
+    $printIncrease: $isIncrease;
+    $printDecrease: $isDecrease;
+
+    @if $printSegment {
+        @media (min-width: screen($minValue)) and (max-width: screen($maxValue, true)) {
+            @content;
+        }
+    }
+
+    @else if $printIncrease {
+        @media (min-width: screen($minValue)) {
+            @content;
+        }
+    }
+
+    @else if $printDecrease {
+        @media (max-width: screen($maxValue, true)) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+
+}
+
+
+@mixin f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

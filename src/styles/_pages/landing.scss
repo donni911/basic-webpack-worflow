@@ -1,0 +1,74 @@
+.c-header {
+    &__primary {
+        @include f-center;
+        padding: 30px 0px;
+    }
+
+    &__secondary {
+        @include f-center;
+        background-color: $black-lighter;
+        padding: 8px 0px;
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 15px;
+        color: $body;
+    }
+
+    .c-header__logo {
+        width: 135px;
+        height: auto;
+
+    }
+}
+
+.c-banner {
+    background-color: $black-light;
+    padding: 80px 0px;
+
+    &__wrapper {
+        @include f-center;
+    }
+
+
+    &__img {
+
+        @include screen(lg) {
+            width: 350px;
+            height: 350px;
+            margin-right: 70px;
+        }
+    }
+
+    &__text {
+        width: 630px;
+    }
+}
+
+.c-plus {
+    background-color: $gray;
+    padding: 30px 0px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        margin: 0px 40px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__description {
+        display: inline-block;
+        margin-left: 25px;
+        width: 125px;
+
+        line-height: 110%;
+        color: $black;
+    }
+}
